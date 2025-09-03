@@ -1,28 +1,111 @@
-<!DOCTYPE html>
+
+[7:05 pm, 03/09/2025] Rehan: /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  background: #2c3e50;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://picsum.photos/1600/900") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 22px;
+  max-width: 700px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #3498db;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  margin-top: 20px;
+}
+[7:25 pm, 03/09/2025] Rehan: <!DOCTYPE html>
 <html>
 <head>
-  <title>My Portfolio</title>
+  <title>Home - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>👋 Welcome to My Portfolio</h1>
-  <p>Hello! I am learning web development and this is my mini website project. 🚀</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <h2>📂 My Pages</h2>
-  <ul>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="foods.html">My Favorite Foods</a></li>
-    <li><a href="links.html">My Links Page</a></li>
-    <li><a href="timetable.html">My Timetable</a></li>
-  </ul>
+  <div class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I’m learning full stack development and this is my first professional website.</p>
+    <a href="about.html" class="btn">Explore More</a>
+  </div>
 
-  <h2>📞 Contact</h2>
-  <p>Email: <a href="mailto:Rehan@email.com">rehan@email.com</a></p>
-
-  <h2>🌍 Social Media</h2>
-  <p>
-    <a href="https://www.instagram.com" target="_luxvora">Instagram</a> | 
-    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-  </p>
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Me</p>
+  </footer>
 </body>
-</html>
-   
+</html>   
