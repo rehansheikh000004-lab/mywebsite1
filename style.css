@@ -133,6 +133,39 @@ table th {
   margin: 15px 0;
 }
 
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #2980b9;
+}
+
 /* 📱 Mobile Responsive Design */
 @media (max-width: 768px) {
   nav a {
@@ -163,5 +196,9 @@ table th {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  .contact-form {
+    width: 90%;
   }
 }
