@@ -1,21 +1,20 @@
-// Fade-in on scroll using Intersection Observer
-document.addEventListener("DOMContentLoaded", () => {
-  // Select all elements with class="fade-in"
-  const fadeElements = document.querySelectorAll(".fade-in");
+// Dark Mode Toggle
+const darkModeBtn = document.getElementById("darkModeBtn");
 
-  // Create an observer that watches elements when they come into view
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        // If element is visible (intersecting the viewport)
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show"); // add "show" class
-        }
-      });
-    },
-    { threshold: 0.2 } // trigger when 20% of element is visible
-  );
+// Check saved mode in localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+  darkModeBtn.textContent = "☀️ Light Mode";
+}
 
-  // Apply observer to each fade-in element
-  fadeElements.forEach((el) => observer.observe(el));
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeBtn.textContent = "☀️ Light Mode";
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    darkModeBtn.textContent = "🌙 Dark Mode";
+    localStorage.setItem("darkMode", "disabled");
+  }
 });
