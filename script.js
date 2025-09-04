@@ -6,7 +6,7 @@ const darkModeBtn = document.getElementById("darkModeBtn");
 // Check saved mode in localStorage
 if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
-  darkModeBtn.textContent = "☀️ Light Mode";
+  if (darkModeBtn) darkModeBtn.textContent = "☀️ Light Mode";
 }
 
 if (darkModeBtn) {
@@ -64,6 +64,7 @@ if (form) {
 
 // Function to display messages
 function showMessage(msg, color) {
+  if (!formMessage) return;
   formMessage.style.color = color;
   formMessage.textContent = msg;
 
@@ -85,7 +86,7 @@ function updateClock() {
     let hours = String(now.getHours()).padStart(2, "0");
     let minutes = String(now.getMinutes()).padStart(2, "0");
     let seconds = String(now.getSeconds()).padStart(2, "0");
-    clock.textContent = ${hours}:${minutes}:${seconds};
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
   }
 }
 setInterval(updateClock, 1000);
