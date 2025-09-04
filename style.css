@@ -1,186 +1,30 @@
-/* ====== Global Styles ====== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
 
-h1, h2, h3 {
-  margin-bottom: 15px;
-}
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo"> My Portfolio
+    </a>
+    <a href="about.html">About</a>
+    <a href="foods.html">Foods</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  <!-- Content... -->
 
-/* ====== Navbar ====== */
-nav {
-  background: #333;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #3498db;
-}
-
-/* ====== Hero Section ====== */
-.hero {
-  padding: 60px;
-  text-align: center;
-  background: linear-gradient(to right, #3498db, #2ecc71);
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2em;
-}
-
-/* ====== Buttons ====== */
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin-top: 15px;
-  background: #3498db;
-  color: #fff;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #2980b9;
-  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
-}
-
-/* ====== Gallery / Cards ====== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
-}
-
-/* ====== Contact Form ====== */
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  padding: 12px;
-  background: #2ecc71;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.contact-form button:hover {
-  background: #27ae60;
-  box-shadow: 0 0 15px rgba(46, 204, 113, 0.6);
-}
-
-/* ====== Timetable Table ====== */
-table {
-  width: 90%;
-  margin: 30px auto;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-th {
-  background: #3498db;
-  color: #fff;
-}
-
-tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-/* ====== Footer ====== */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-/* ====== Fade-in Animation (Scroll) ====== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ====== Responsive Design ====== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8em;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  table {
-    font-size: 14px;
-  }
-}
+  <footer>
+    <p>© 2025 My Portfolio | Designed by Me</p>
+  </footer>
+</body>
+</html>
