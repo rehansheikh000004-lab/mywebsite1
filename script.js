@@ -154,3 +154,18 @@ function updateClock() {
 // Run every second
 setInterval(updateClock, 1000);
 updateClock();
+
+<div id="clock">Loading...</div>
+
+<script>
+  function updateClock() {
+    let now = new Date();
+    let h = now.getHours().toString().padStart(2, "0");
+    let m = now.getMinutes().toString().padStart(2, "0");
+    let s = now.getSeconds().toString().padStart(2, "0");
+    document.getElementById("clock").textContent = h + ":" + m + ":" + s;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // run immediately
+</script>
