@@ -138,7 +138,7 @@ function updateClock() {
   let seconds = now.getSeconds();
   let ampm = hours >= 12 ? "PM" : "AM";
 
-  hours = hours % 12 || 12; // 12-hour format
+  hours = hours % 12 || 12;
   minutes = minutes < 10 ? "0" + minutes : minutes;
   seconds = seconds < 10 ? "0" + seconds : seconds;
 
@@ -153,4 +153,4 @@ function updateClock() {
 
 // Run every second
 setInterval(updateClock, 1000);
-updateClock(); // run immediately
+updateClock();
