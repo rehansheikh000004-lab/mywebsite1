@@ -8,13 +8,32 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       background: #111;
       color: white;
+    }
+
+    header {
+      background: #222;
+      padding: 15px;
       text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00fff7;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
     }
 
     h1 {
       margin: 20px;
+      text-align: center;
       color: #00fff7;
     }
 
@@ -29,6 +48,7 @@
       background: #222;
       padding: 15px;
       border-radius: 10px;
+      text-align: center;
       box-shadow: 0 0 10px #00fff7;
     }
 
@@ -50,11 +70,31 @@
     .card a:hover {
       background: white;
     }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
+  <!-- ✅ Navbar -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Page Title -->
   <h1>My Projects 🚀</h1>
 
+  <!-- ✅ Project Cards -->
   <div class="projects-container">
     <div class="card">
       <h3>Digital Clock ⏰</h3>
@@ -91,5 +131,7 @@
       <a href="quiz.html">Open</a>
     </div>
   </div>
-</body>
-</html>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p>&copy; 2025 Rehan Sheikh | My Portfolio Website</
