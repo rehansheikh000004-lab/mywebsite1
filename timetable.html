@@ -3,31 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timetable</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Timetable</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background: #00fff7;
+      color: #111;
+      padding: 40px 20px;
+    }
+    nav {
+      background: #222;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #00fff7;
+      color: #111;
+    }
+    table {
+      width: 80%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px #00fff7;
+    }
+    th, td {
+      border: 1px solid #00fff7;
+      padding: 12px;
+    }
+    th {
+      background: #00fff7;
+      color: #111;
+    }
+    footer {
+      background: #222;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>📅 My Timetable</h1>
+  </header>
 
-  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="foods.html">Foods</a>
-    <a href="timetable.html">Timetable</a>
     <a href="projects.html">Projects</a>
+    <a href="timetable.html">Timetable</a>
     <a href="contact.html">Contact</a>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
   </nav>
 
-  <!-- Timetable -->
-  <section class="fade-in" style="padding:40px; text-align:center;">
-    <h1>📅 My Weekly Timetable</h1>
-  </section>
+  <table>
+    <tr><th>Day</th><th>Task</th></tr>
+    <tr><td>Monday</td><td>Learn HTML & CSS</td></tr>
+    <tr><td>Tuesday</td><td>Practice JavaScript</td></tr>
+    <tr><td>Wednesday</td><td>Work on Projects</td></tr>
+    <tr><td>Thursday</td><td>Debug & Improve</td></tr>
+    <tr><td>Friday</td><td>New Features</td></tr>
+    <tr><td>Saturday</td><td>Explore Advanced Topics</td></tr>
+    <tr><td>Sunday</td><td>Rest & Review</td></tr>
+  </table>
 
   <footer>
-    <p>© 2025 My Portfolio | Designed by Me</p>
+    <p>© 2025 Rehan Sheikh | Built with ❤️ using HTML, CSS, and JavaScript</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
