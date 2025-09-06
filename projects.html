@@ -2,101 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Projects</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
-    header {
-      background: #00fff7;
-      color: #111;
-      padding: 40px 20px;
-    }
-    nav {
-      background: #222;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    nav a {
-      color: #00fff7;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background: #00fff7;
-      color: #111;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .card {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00fff7;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    a.btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background: #00fff7;
-      color: #111;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    footer {
-      background: #222;
-      padding: 15px;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🚀 My Fun Projects</h1>
+  <header class="projects-header">
+    <h1>🚀 My Projects</h1>
+    <p>Here are some fun apps I’ve built with HTML, CSS & JavaScript.</p>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="timetable.html">Timetable</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main class="projects-grid">
+    <div class="project-card">
+      <h2>⏰ Digital Clock</h2>
+      <a href="clock.html">Open</a>
+    </div>
 
-  <div class="container">
-    <div class="card"><h3>Clock 🕒</h3><a href="clock.html" class="btn">Open</a></div>
-    <div class="card"><h3>Stopwatch ⏱</h3><a href="stopwatch.html" class="btn">Open</a></div>
-    <div class="card"><h3>Notes 📝</h3><a href="notes.html" class="btn">Open</a></div>
-    <div class="card"><h3>Calculator ➗</h3><a href="calculator.html" class="btn">Open</a></div>
-    <div class="card"><h3>Weather ☁️</h3><a href="weather.html" class="btn">Open</a></div>
-    <div class="card"><h3>Quotes 💭</h3><a href="quotes.html" class="btn">Open</a></div>
-    <div class="card"><h3>Quiz 🎯</h3><a href="quiz.html" class="btn">Open</a></div>
-    <div class="card"><h3>Password Generator 🔑</h3><a href="password.html" class="btn">Open</a></div>
-    <div class="card"><h3>Typing Speed Test ⌨️</h3><a href="typing.html" class="btn">Open</a></div>
-    <div class="card"><h3>Theme Toggle 🌙☀️</h3><a href="theme.html" class="btn">Open</a></div>
-  </div>
+    <div class="project-card">
+      <h2>📝 Notes App</h2>
+      <a href="notes.html">Open</a>
+    </div>
+
+    <div class="project-card">
+      <h2>🧮 Calculator</h2>
+      <a href="calculator.html">Open</a>
+    </div>
+
+    <div class="project-card">
+      <h2>🎮 Quiz App</h2>
+      <a href="quiz.html">Open</a>
+    </div>
+
+    <div class="project-card">
+      <h2>✅ To-Do List v2</h2>
+      <a href="todo.html">Open</a>
+    </div>
+  </main>
 
   <footer>
-    <p>© 2025 Rehan Sheikh | Built with ❤️ using HTML, CSS, and JavaScript</p>
+    <a href="index.html">⬅ Back to Home</a>
   </footer>
 </body>
 </html>
