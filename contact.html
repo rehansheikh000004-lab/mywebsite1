@@ -3,38 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Contact Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background: #00fff7;
+      color: #111;
+      padding: 40px 20px;
+    }
+    nav {
+      background: #222;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #00fff7;
+      color: #111;
+    }
+    form {
+      margin: 40px auto;
+      max-width: 400px;
+      text-align: left;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00fff7;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #00fff7;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: white;
+      color: #111;
+    }
+    footer {
+      background: #222;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>📩 Contact Me</h1>
+  </header>
 
-  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="foods.html">Foods</a>
-    <a href="timetable.html">Timetable</a>
     <a href="projects.html">Projects</a>
+    <a href="timetable.html">Timetable</a>
     <a href="contact.html">Contact</a>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
   </nav>
 
-  <!-- Contact Form -->
-  <section class="fade-in" style="padding:40px; text-align:center;">
-    <h1>📩 Contact Me</h1>
-    <form id="contactForm" class="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-      <p id="formMessage" style="margin-top: 10px; font-weight: bold;"></p>
-    </form>
-  </section>
+  <form>
+    <label>Name:</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <label>Message:</label>
+    <textarea rows="4" placeholder="Type your message..." required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
 
   <footer>
-    <p>© 2025 My Portfolio | Designed by Me</p>
+    <p>© 2025 Rehan Sheikh | Built with ❤️ using HTML, CSS, and JavaScript</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
