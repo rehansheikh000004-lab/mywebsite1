@@ -4,100 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Projects</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       background: #111;
       color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
-
     header {
-      background: #222;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #00fff7;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    h1 {
-      margin: 20px;
-      text-align: center;
-      color: #00fff7;
-    }
-
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      background: #00fff7;
+      color: #111;
       padding: 20px;
     }
-
+    h1 {
+      margin: 0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
     .card {
       background: #222;
-      padding: 15px;
+      padding: 20px;
       border-radius: 10px;
-      text-align: center;
       box-shadow: 0 0 10px #00fff7;
+      transition: transform 0.3s;
     }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #00fff7;
+    .card:hover {
+      transform: scale(1.05);
     }
-
-    .card a {
-      text-decoration: none;
-      color: black;
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
       background: #00fff7;
-      padding: 8px 12px;
+      color: #111;
+      text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .card a:hover {
-      background: white;
-    }
-
-    footer {
-      background: #222;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <!-- ✅ Navbar -->
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="timetable.html">Timetable</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>🚀 My Fun Projects</h1>
   </header>
 
-  <!-- ✅ Page Title -->
-  <h1>My Projects 🚀</h1>
-
-  <!-- ✅ Project Cards -->
-  <div class="projects-container">
+  <div class="container">
     <div class="card">
-      <h3>Digital Clock ⏰</h3>
+      <h3>Clock 🕒</h3>
       <a href="clock.html">Open</a>
     </div>
 
@@ -107,31 +66,44 @@
     </div>
 
     <div class="card">
-      <h3>Notes App 📝</h3>
+      <h3>Notes 📝</h3>
       <a href="notes.html">Open</a>
     </div>
 
     <div class="card">
-      <h3>Calculator 🧮</h3>
+      <h3>Calculator ➗</h3>
       <a href="calculator.html">Open</a>
     </div>
 
     <div class="card">
-      <h3>Weather App ☁️</h3>
+      <h3>Weather ☁️</h3>
       <a href="weather.html">Open</a>
     </div>
 
     <div class="card">
-      <h3>Quotes Generator 💡</h3>
+      <h3>Quotes 💭</h3>
       <a href="quotes.html">Open</a>
     </div>
 
     <div class="card">
-      <h3>Quiz App 🎯</h3>
+      <h3>Quiz 🎯</h3>
       <a href="quiz.html">Open</a>
     </div>
-  </div>
 
-  <!-- ✅ Footer -->
-  <footer>
-    <p>&copy; 2025 Rehan Sheikh | My Portfolio Website</
+    <div class="card">
+      <h3>Password Generator 🔑</h3>
+      <a href="password.html">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Typing Speed Test ⌨️</h3>
+      <a href="typing.html">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>Theme Toggle 🌙☀️</h3>
+      <a href="theme.html">Open</a>
+    </div>
+  </div>
+</body>
+</html>
