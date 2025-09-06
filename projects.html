@@ -6,20 +6,35 @@
   <title>My Projects</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #111;
       color: white;
-      margin: 0;
-      padding: 0;
       text-align: center;
     }
     header {
       background: #00fff7;
       color: #111;
-      padding: 20px;
+      padding: 40px 20px;
     }
-    h1 {
-      margin: 0;
+    nav {
+      background: #222;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #00fff7;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #00fff7;
+      color: #111;
     }
     .container {
       display: grid;
@@ -37,7 +52,7 @@
     .card:hover {
       transform: scale(1.05);
     }
-    a {
+    a.btn {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 15px;
@@ -47,6 +62,12 @@
       border-radius: 5px;
       font-weight: bold;
     }
+    footer {
+      background: #222;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -54,56 +75,28 @@
     <h1>🚀 My Fun Projects</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <div class="container">
-    <div class="card">
-      <h3>Clock 🕒</h3>
-      <a href="clock.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Stopwatch ⏱</h3>
-      <a href="stopwatch.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Notes 📝</h3>
-      <a href="notes.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Calculator ➗</h3>
-      <a href="calculator.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Weather ☁️</h3>
-      <a href="weather.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Quotes 💭</h3>
-      <a href="quotes.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Quiz 🎯</h3>
-      <a href="quiz.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Password Generator 🔑</h3>
-      <a href="password.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Typing Speed Test ⌨️</h3>
-      <a href="typing.html">Open</a>
-    </div>
-
-    <div class="card">
-      <h3>Theme Toggle 🌙☀️</h3>
-      <a href="theme.html">Open</a>
-    </div>
+    <div class="card"><h3>Clock 🕒</h3><a href="clock.html" class="btn">Open</a></div>
+    <div class="card"><h3>Stopwatch ⏱</h3><a href="stopwatch.html" class="btn">Open</a></div>
+    <div class="card"><h3>Notes 📝</h3><a href="notes.html" class="btn">Open</a></div>
+    <div class="card"><h3>Calculator ➗</h3><a href="calculator.html" class="btn">Open</a></div>
+    <div class="card"><h3>Weather ☁️</h3><a href="weather.html" class="btn">Open</a></div>
+    <div class="card"><h3>Quotes 💭</h3><a href="quotes.html" class="btn">Open</a></div>
+    <div class="card"><h3>Quiz 🎯</h3><a href="quiz.html" class="btn">Open</a></div>
+    <div class="card"><h3>Password Generator 🔑</h3><a href="password.html" class="btn">Open</a></div>
+    <div class="card"><h3>Typing Speed Test ⌨️</h3><a href="typing.html" class="btn">Open</a></div>
+    <div class="card"><h3>Theme Toggle 🌙☀️</h3><a href="theme.html" class="btn">Open</a></div>
   </div>
+
+  <footer>
+    <p>© 2025 Rehan Sheikh | Built with ❤️ using HTML, CSS, and JavaScript</p>
+  </footer>
 </body>
 </html>
