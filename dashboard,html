@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 My Dashboard</h1>
+  </header>
+
+  <main class="dashboard">
+    <!-- Cards -->
+    <div class="card">
+      <h2>Total Users</h2>
+      <p>1,245</p>
+    </div>
+
+    <div class="card">
+      <h2>Revenue</h2>
+      <p>$9,876</p>
+    </div>
+
+    <div class="card">
+      <h2>Orders</h2>
+      <p>432</p>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
