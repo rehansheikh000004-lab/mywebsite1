@@ -9,6 +9,7 @@
 <body>
   <header>
     <h1>🛒 My Shop</h1>
+    <p>Cart: <span id="cart-count">0</span> items</p>
   </header>
 
   <main class="product-grid">
@@ -16,22 +17,24 @@
       <img src="https://via.placeholder.com/200" alt="Product 1">
       <h2>Product 1</h2>
       <p>$19.99</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
 
     <div class="product-card">
       <img src="https://via.placeholder.com/200" alt="Product 2">
       <h2>Product 2</h2>
       <p>$29.99</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
 
     <div class="product-card">
       <img src="https://via.placeholder.com/200" alt="Product 3">
       <h2>Product 3</h2>
       <p>$39.99</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
   </main>
+
+  <script src="shop.js"></script>
 </body>
 </html>
