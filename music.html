@@ -8,18 +8,26 @@
 </head>
 <body>
   <header>
-    <h1>🎵 My Music Player</h1>
+    <h1>🎶 My Music Player</h1>
   </header>
 
-  <main class="player">
-    <h2 id="song-title">Song Title</h2>
-    <audio id="audio" src="songs/song1.mp3"></audio>
+  <main>
+    <!-- Song Title -->
+    <h2 id="song-title">Loading...</h2>
 
+    <!-- Audio Player -->
+    <audio id="audio" controls></audio>
+
+    <!-- Controls -->
     <div class="controls">
-      <button onclick="prevSong()">⏮ Prev</button>
-      <button onclick="playPause()">▶️ / ⏸</button>
-      <button onclick="nextSong()">⏭ Next</button>
+      <button id="prev">⏮ Prev</button>
+      <button id="play">▶ Play</button>
+      <button id="next">⏭ Next</button>
     </div>
+
+    <!-- Playlist -->
+    <h3>Playlist</h3>
+    <ul id="playlist"></ul>
   </main>
 
   <script src="music.js"></script>
