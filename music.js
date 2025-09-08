@@ -35,3 +35,30 @@ function prevSong() {
 
 // Load the first song on page load
 loadSong(currentSong);
+
+// ===== Playlist UI =====
+const playlist = document.getElementById("playlist");
+
+// Generate playlist
+songs.forEach((song, index) => {
+  const li = document.createElement("li");
+  li.textContent = song.title;
+  li.addEventListener("click", () => {
+    currentSong = index;
+    loadSong(currentSong);
+    audio.play();
+    playBtn.textContent = "⏸ Pause";
+    updatePlaylist();
+  });
+  playlist.appendChild(li);
+});
+
+// Highlight active song
+function updatePlaylist() {
+  const items = playlist.querySelectorAll("li");
+  items.forEach((item, idx) => {
+    item.classList.toggle("active", idx === currentSong);
+  });
+}
+
+updatePlaylist();
