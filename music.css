@@ -1,41 +1,48 @@
-/* ===== Music Player Styles ===== */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background: #111;
   color: #fff;
   text-align: center;
-}
-
-header {
-  background: #00fff7;
-  color: #111;
   padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
 
-.player {
-  margin-top: 50px;
-}
-
-#song-title {
-  margin-bottom: 20px;
+header h1 {
   color: #00fff7;
 }
 
-.controls button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #00fff7;
-  color: #111;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
+.controls {
+  margin: 20px 0;
 }
 
-.controls button:hover {
-  background: #00d9cc;
+button {
+  background: #00fff7;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00cfc7;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+}
+
+#playlist li {
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  background: #222;
+}
+
+#playlist li.active {
+  background: #00fff7;
+  color: #111;
+  font-weight: bold;
 }
