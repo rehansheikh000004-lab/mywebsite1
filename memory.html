@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    h2 {
+      color: #00fff7;
+      margin-bottom: 15px;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 255, 247, 0.4);
+    }
+    .card.flipped {
+      background: #00fff7;
+      color: #111;
+      cursor: default;
+    }
+    .win {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: limegreen;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Memory Card Game</h2>
+  <div class="game-board" id="gameBoard"></div>
+  <div class="win" id="winMessage">🎉 You Win! 🎉</div>
+
+  <script>
+    const symbols = ["🍎", "🍌", "🍇", "🍒", "🍉", "🥝", "🍍", "🥭"];
+    let cards = [...symbols, ...symbols]; // duplicate pairs
+    let firstCard = null;
+    let lockBoard = false;
+    let matches = 0;
+
+    // shuffle
+    cards.sort(() => 0.5 - Math.random());
+
+    const board = document.getElementById("gameBoard");
+
+    // create cards
+    cards.forEach((symbol) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.dataset.symbol = symbol;
+      card.textContent = "?";
+      card.addEventListener("click", flipCard);
+      board.appendChild(card);
+    });
+
+    function flipCard() {
+      if (lockBoard || this.classList.contains("flipped")) return;
+
+      this.textContent = this.dataset.symbol;
+      this.classList.add("flipped");
+
+      if (!firstCard) {
+        firstCard = this;
+      } else {
+        checkMatch(this);
+      }
+    }
+
+    function checkMatch(secondCard) {
+      if (firstCard.dataset.symbol === secondCard.dataset.symbol) {
+        matches++;
+        firstCard = null;
+        if (matches === symbols.length) {
+          document.getElementById("winMessage").style.display = "block";
+        }
+      } else {
+        lockBoard = true;
+        setTimeout(() => {
+          firstCard.textContent = "?";
+          secondCard.textContent = "?";
+          firstCard.classList.remove("flipped");
+          secondCard.classList.remove("flipped");
+          firstCard = null;
+          lockBoard = false;
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html>
