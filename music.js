@@ -1,64 +1,59 @@
-let songs = [
+// ===== Music Player =====
+
+// Add your songs here. Just update this array when you add more files.
+const songs = [
   { title: "Song 1", src: "songs/song1.mp3" },
   { title: "Song 2", src: "songs/song2.mp3" },
   { title: "Song 3", src: "songs/song3.mp3" }
 ];
 
 let currentSong = 0;
-let audio = document.getElementById("audio");
-let songTitle = document.getElementById("song-title");
+const audio = document.getElementById("audio");
+const songTitle = document.getElementById("song-title");
+const playBtn = document.getElementById("play");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
+// Load a song by index
 function loadSong(index) {
   audio.src = songs[index].src;
   songTitle.textContent = songs[index].title;
 }
 
-function playPause() {
+// Play / Pause toggle
+function togglePlay() {
   if (audio.paused) {
     audio.play();
+    playBtn.textContent = "⏸ Pause";
   } else {
     audio.pause();
+    playBtn.textContent = "▶ Play";
   }
 }
 
+// Next song
 function nextSong() {
   currentSong = (currentSong + 1) % songs.length;
   loadSong(currentSong);
   audio.play();
+  playBtn.textContent = "⏸ Pause";
 }
 
+// Previous song
 function prevSong() {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   loadSong(currentSong);
   audio.play();
+  playBtn.textContent = "⏸ Pause";
 }
 
-// Load the first song on page load
+// Event listeners
+playBtn.addEventListener("click", togglePlay);
+nextBtn.addEventListener("click", nextSong);
+prevBtn.addEventListener("click", prevSong);
+
+// Auto move to next when song ends
+audio.addEventListener("ended", nextSong);
+
+// Initial load
 loadSong(currentSong);
-
-// ===== Playlist UI =====
-const playlist = document.getElementById("playlist");
-
-// Generate playlist
-songs.forEach((song, index) => {
-  const li = document.createElement("li");
-  li.textContent = song.title;
-  li.addEventListener("click", () => {
-    currentSong = index;
-    loadSong(currentSong);
-    audio.play();
-    playBtn.textContent = "⏸ Pause";
-    updatePlaylist();
-  });
-  playlist.appendChild(li);
-});
-
-// Highlight active song
-function updatePlaylist() {
-  const items = playlist.querySelectorAll("li");
-  items.forEach((item, idx) => {
-    item.classList.toggle("active", idx === currentSong);
-  });
-}
-
-updatePlaylist();
