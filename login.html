@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 350px;
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 247, 0.5);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00fff7;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #00fff7;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00c9c0;
+    }
+
+    .toggle {
+      text-align: center;
+      margin-top: 15px;
+      cursor: pointer;
+      color: #aaa;
+    }
+
+    .toggle:hover {
+      color: #00fff7;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div id="loginForm">
+      <h2>Login</h2>
+      <input type="text" id="loginUser" placeholder="Username">
+      <input type="password" id="loginPass" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p class="error" id="loginError"></p>
+      <p class="toggle" onclick="toggleForms()">Don’t have an account? Signup</p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupForm" class="hidden">
+      <h2>Signup</h2>
+      <input type="text" id="signupName" placeholder="Name">
+      <input type="email" id="signupEmail" placeholder="Email">
+      <input type="password" id="signupPass" placeholder="Password">
+      <input type="password" id="signupConfirm" placeholder="Confirm Password">
+      <button onclick="signup()">Signup</button>
+      <p class="error" id="signupError"></p>
+      <p class="toggle" onclick="toggleForms()">Already have an account? Login</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleForms() {
+      document.getElementById("loginForm").classList.toggle("hidden");
+      document.getElementById("signupForm").classList.toggle("hidden");
+    }
+
+    function login() {
+      let user = document.getElementById("loginUser").value;
+      let pass = document.getElementById("loginPass").value;
+      let error = document.getElementById("loginError");
+
+      if (user === "" || pass === "") {
+        error.textContent = "Please fill all fields!";
+      } else {
+        error.textContent = "";
+        alert("Login successful! (demo only)");
+      }
+    }
+
+    function signup() {
+      let name = document.getElementById("signupName").value;
+      let email = document.getElementById("signupEmail").value;
+      let pass = document.getElementById("signupPass").value;
+      let confirm = document.getElementById("signupConfirm").value;
+      let error = document.getElementById("signupError");
+
+      if (name === "" || email === "" || pass === "" || confirm === "") {
+        error.textContent = "All fields are required!";
+      } else if (!email.includes("@")) {
+        error.textContent = "Invalid email!";
+      } else if (pass.length < 6) {
+        error.textContent = "Password must be at least 6 characters!";
+      } else if (pass !== confirm) {
+        error.textContent = "Passwords do not match!";
+      } else {
+        error.textContent = "";
+        alert("Signup successful! (demo only)");
+      }
+    }
+  </script>
+</body>
+</html>
